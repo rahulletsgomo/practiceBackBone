@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Practice Backbone JS</title>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            Person = Backbone.Model.extend({
+                initialize: function(){
+                    alert("Welcome to this world");
+                }
+            });
+
+            var person = new Person({ name: "Thomas", age: 67, children: ['Ryan']});
+
+            var age = person.get("age"); // 67
+            var name = person.get("name"); // "Thomas"
+            var children = person.get("children"); // ['Ryan']
+
+            console.log("Name : "+name)
+            console.log("Age : "+age)
+            console.log("Children : "+children)
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
